@@ -1,7 +1,3 @@
-# Task Manager Backend
-
-
-
 # Tech Stack
 
 - **Language**: Go
@@ -15,4 +11,17 @@
 
 
 # Project Structure
+task-manager/
+├── cmd/                  # Main application entry point
+├── internal/
+│   ├── handlers/         # HTTP handlers
+│   ├── models/           # Data models
+│   ├── services/         # Business logic
+│   ├── repository/       # DB access layer
+│   └── middleware/       # Auth, logging, etc.
+├── pkg/                  # Utility packages
+├── config/               # Configuration files
+├── migrations/           # DB migration scripts
+├── go.mod
+└── README.md
 
