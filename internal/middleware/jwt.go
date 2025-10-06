@@ -30,8 +30,6 @@ func JWTMiddleware(next http.Handler) http.Handler { //checks dor valid jwt befo
 			return
 		}
 
-		// Add userID to context
-		//ctx := context.WithValue(r.Context(), "userID", claims["user_id"])
 		ctx := context.WithValue(r.Context(), userIDKey, claims["user_id"])
 
 		next.ServeHTTP(w, r.WithContext(ctx))
