@@ -8,6 +8,7 @@ import (
 )
 
 func TestRegister(t *testing.T) {
+
 	repository.InitDB()
 	req := httptest.NewRequest("POST", "/register", nil) //creates new http post request
 	w := httptest.NewRecorder()                          //creates response recorder
